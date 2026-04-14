@@ -66,6 +66,48 @@
                 <!-- img i css-->
             </div>
         </section>
+
+        <section> <!-- img som bg img-->
+  <section>
+            <!--billede indsættes direkte i css, da det kun er dekorativt-->
+        <form action="#">
+            <h2>Kontakt os</h2>
+            <p>Kontakt os nedenfor hvis du ønsker et uforpligtende tilbud.</p>
+
+            <div>
+                <label for="name"></label>
+                <input type="text" id="name" placeholder="Navn" required>
+
+                <label for="mail"></label>
+                <input type="email" id="mail" placeholder="E-mail" required>
+            </div>
+            
+            <div>
+                <label for="telefon"></label>
+                <input type="tel" id="telefon" placeholder="Telefon" required>
+
+                <label for="region"></label>
+                <select id="region">
+                <option value="0" selected="true" disabled>Region</option>
+                <option value="1">Syddanmark</option>
+                <option value="2">Sjælland</option>
+                <option value="3">Hovedstaden</option>
+                <option value="4">Nordjylland</option>
+                <option value="5">Midtjylland</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="besked"></label>
+                <textarea id="besked" cols="30" rows="10">Besked</textarea>
+            </div>
+
+            <div>
+                <input type="submit" name="submit" value="Send besked">
+            </div>
+        </form>
+ 
+        </section>
        
     </main>
     
