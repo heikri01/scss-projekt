@@ -1,1 +1,6 @@
+@charset "UTF-8";
+/*variabler*/
+/* variabler deklareres i toppen af vores stylesheet og de er globale. Variabler defineret i blokke ( {} ) er normalvis lokale og kan kun tilgås inde i blokken*/
+/*Mixin*/
+/*mixin er en måde  at genbruge kode på. i kan tage kode som bruges flere steder og samle det i en mixin*/
 /*Partial fil hentes ind i style.scss som et modul. filen er en samling af varianler, mixins og funktioner, der kan genbruges*//*# sourceMappingURL=style.css.map */
