@@ -5,13 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudieBranding</title>
     <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/72df3123e5.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <a href="#hovedindhold" class="screen-reader-text">Skip to main content </a>
+    <div class="container">
     <header>
-        <a href="index.html"><img src="img/logo-gron.png" alt=""></a>
         <nav>
-            <ul>
-                <a href="#"><li>Forside</li></a>
+            <a href="index.html"><img src="img/logo-gron.png" alt=""></a>
+          <button
+            id="bars"
+            aria-expanded="false"
+            aria-controls="menu"
+            aria-label="åben navigation"
+          >
+            <!-- aria-expanden fortæller skærmoplæseren at menuen er lukket-->
+            <!--aria-label giver skærmlæseren en besked om hvad knappen gør-->
+            <!--button gør menuen trykbar så den kan åbnes via tastatur-->
+            <!--aria-controls fortæller skærmoplæseren at menuen er styret af knappen-->
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+
+                <ul id="menu">
+                <a class="active" href="#"><li>Forside</li></a>
                 <a href="#"><li>Om</li></a>
                 <a href="#"><li>Services</li></a>
                 <a href="#"><li>Kontakt</li></a>    
@@ -19,9 +37,9 @@
         </nav>
     </header>
 
-    <section>
+    <section id="hovedindhold" class="header-img">
         <!-- img i css -->
-        <div>
+        <div class="banner-tekst">
             <h1>Styrk din profesionelle fremtoning og skab et bedre brand</h1>
             <p>Lad os hjælpe dig med rejsen!</p>
             <a href="#">Kontakt os</a>
@@ -29,22 +47,22 @@
     </section> 
 
     <main>
-        <section>
+        <section class="cta-wrapper">
             <h2>Hvad skal vi hjælpe dig med?</h2>
             <div>
-                <div>
+                <div class="cta-1">
                     <img src="img/branding.png" alt="">
                     <h3>Branding</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ut ea maiores incidunt corrupti, repellendus at cupiditate id voluptatibus nisi placeat inventore aliquam fuga, ipsam dolore quisquam dolores quod beatae.</p>
-                    <a href="#">Læs mere om branding</a>
+                    <a class="primary-btn" href="#">Læs mere om branding</a>
                 </div>
-                <div>
+                <div class="cta-2">
                     <img src="img/seo.png" alt="">
                     <h3>SEO</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis ut? Dolores optio fugiat cumque praesentium culpa repellendus dolorum ipsam! Soluta magnam magni qui id dolorem quia ducimus neque ut?</p>
                     <a href="#">Læs mere om SEO</a>
                 </div>
-                <div>
+                <div class="cta-3">
                     <img src="img/internet.png" alt="">
                     <h3>Hjemmeside</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur minima quibusdam quisquam hic esse corrupti magnam fugiat at fuga blanditiis, eos ad, eligendi, laboriosam deleniti sequi voluptate! Quo, perferendis harum!</p>
@@ -53,40 +71,40 @@
             </div>
         </section>
 
-        <section>
-            <div>
+        <section class="txt-img-section">
+            <div class="tekst">
                 <h2>Vi går hele vejen med jer</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, earum, harum architecto placeat quo voluptates aliquid tempore molestias iure dolor voluptas, temporibus ex sed ipsam quia eum unde laudantium accusamus.</p>
                 <p>Iste, tempora id nihil pariatur blanditiis sequi, numquam eaque at tenetur nemo facilis quaerat est ipsum et magnam sunt nulla ad, beatae modi aliquam quasi sapiente iusto quas! Quos, suscipit!</p>
                 <p>Minus dolore excepturi error eum, quibusdam nam similique sunt ea! Optio magnam, error minima repellendus sed ut assumenda perspiciatis ab laboriosam reprehenderit, dicta omnis fugiat obcaecati, distinctio cupiditate nam accusantium.</p>
                 <p>Temporibus minus saepe sint pariatur, nostrum commodi nobis fuga eligendi ullam vero libero aliquid culpa quam deserunt facere exercitationem rerum aperiam officiis minima possimus, aliquam voluptatibus eum assumenda. Placeat, eligendi.</p>
-                <a href="#">Læs mere om vores processarbejde</a>
+                <a class="secondary-btn" href="#">Læs mere om vores processarbejde</a>
             </div>
-            <div>
+            <div class="billede">
                 <!-- img i css-->
             </div>
         </section>
 
-        <section> <!-- img som bg img-->
-  <section>
+
+  <section class="kontakt-bg-img">
             <!--billede indsættes direkte i css, da det kun er dekorativt-->
-        <form action="#">
+        <form class="kontaktform" >
             <h2>Kontakt os</h2>
             <p>Kontakt os nedenfor hvis du ønsker et uforpligtende tilbud.</p>
 
-            <div>
-                <label for="name"></label>
+            <div class="section-form">
+                <label class="visually-hidden" for="name"></label>
                 <input type="text" id="name" placeholder="Navn" required>
 
-                <label for="mail"></label>
+                <label class="visually-hidden" for="mail"></label>
                 <input type="email" id="mail" placeholder="E-mail" required>
             </div>
             
-            <div>
-                <label for="telefon"></label>
+            <div class="section-form">
+                <label class="visually-hidden" for="telefon"></label>
                 <input type="tel" id="telefon" placeholder="Telefon" required>
 
-                <label for="region"></label>
+                <label class="visually-hidden" for="region"></label>
                 <select id="region">
                 <option value="0" selected="true" disabled>Region</option>
                 <option value="1">Syddanmark</option>
@@ -97,12 +115,12 @@
                 </select>
             </div>
 
-            <div>
-                <label for="besked"></label>
-                <textarea id="besked" cols="30" rows="10">Besked</textarea>
+            <div class="section-form">
+                <label class="visually-hidden" for="besked"></label>
+                <textarea id="besked" rows="8">Besked</textarea>
             </div>
 
-            <div>
+            <div class="section-form">
                 <input type="submit" name="submit" value="Send besked">
             </div>
         </form>
@@ -111,19 +129,19 @@
     </main>
     
     <footer>
-        <address>
+        <address class="footer-left">
             <h3>Info</h3>
             <p>Branding.Co</p>
             <p>Kassedammen 1</p>
             <p>6755 Sønderby</p>
-            <p>Tlf.: 25 45 65 45</p>
+            <p>Tlf.: <a href="tel:25456545">25 45 65 45</a></p>
             <p>CVR: 2343 2323</p>
         </address>
-        <div>
-            <img src="img/logo-gron.png" alt="">
+        <div class="footer-right">
+            <img class="logo-footer" src="img/logo-gron.png" alt="">
         </div>
-        <p>Branding.co</p>
+        <p class="footer-bund">Branding.co</p>
     </footer>
-
+</div>
 </body>
 </html>
