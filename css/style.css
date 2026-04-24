@@ -114,7 +114,7 @@ nav a:hover, nav .active {
   font-size: 2vw;
 }
 .header-img .banner-tekst a {
-  background-color: #f0f0f0;
+  background-color: #388071;
   padding: 0.8em 1em;
   border-radius: 8px;
   color: #ffffff;
@@ -162,7 +162,7 @@ main {
   margin-bottom: 2em;
 }
 .cta-1 a, .cta-2 a, .cta-3 a {
-  background-color: #f0f0f0;
+  background-color: #388071;
   padding: 0.8em 1em;
   border-radius: 8px;
   color: #ffffff;
@@ -193,7 +193,7 @@ main {
   text-align: left;
 }
 .txt-img-section .tekst .secondary-btn {
-  background-color: #f0f0f0;
+  background-color: transparent;
   padding: 0.8em 1em;
   border-radius: 8px;
   color: #ffffff;
