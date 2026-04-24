@@ -7,18 +7,18 @@ body {
     margin: 0;
     padding: 0;
     font-family: partial.$font;
-    background-color: partial.$bg-color;
+    background-color: partial.$bgColor;
 
     /*nesting - indsætter "alle" elementer som har direkte relation til øverste element af blokken. I det her tilfælde er blokken body*/
         p {
             font-size: 16px;
-            color: partial.$text-color;
+            color: partial.$textColor;
             line-height: 1.5;
         }
 
         h1, h2, h3, h4, h5, h6 {
             font-weight: 600;
-            color: partial.$text-color;
+            color: partial.$textColor;
         }
 }
 
@@ -54,8 +54,8 @@ img {
 /*Navigation*/
 header {
     grid-column: 1/6;
-    background-color: partial.$nav-color;
-    border-bottom: 4px solid partial.$primary-color;
+    background-color: partial.$navColor;
+    border-bottom: 4px solid partial.$primaryColor;
 }
 
 nav {
@@ -77,7 +77,7 @@ nav {
         }
 
         a {
-            color: partial.$text-color;
+            color: partial.$textColor;
             padding: 0.5em;
             margin: 0.5em;
             font-size: 20px;
@@ -86,7 +86,7 @@ nav {
         }
 
         a:hover, .active {
-            color: partial.$primary-color;
+            color: partial.$primaryColor;
         }
 }
 
@@ -99,7 +99,7 @@ nav {
     background-position: center;
     height: 75vh;
     margin-bottom: 1em;
-    border-bottom: 4px solid partial.$primary-color;
+    border-bottom: 4px solid partial.$primaryColor;
 
         .banner-tekst {
             position: absolute;
@@ -119,7 +119,7 @@ nav {
                 position: absolute;
 
                 &:hover {
-                    background-color: partial.$secondary-color;
+                    background-color: partial.$secondaryColor;
                     transition: 0.3s ease-in-out;
                 }
             }
@@ -165,9 +165,97 @@ main {
            display: block; 
 
                 &:hover{
-                    background-color: partial.$secondary-color;
+                    background-color: partial.$secondaryColor;
                     transition: 0.3s ease-in-out;
 
                 }
         }
 }
+
+/* Sektion med Tekst og billede */
+
+.txt-img-section {
+    grid-column: 1/7;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    .tekst {
+        grid-column: 1/5;
+        background-color: partial.$secondaryColor;
+        padding: 2em 4em 4em 4em;
+
+            p, h2 {
+                color: partial.$bgColor;
+            }
+
+            p:nth-of-type(4) {
+                text-align: left;
+            } 
+
+            .secondary-btn {
+                @include partial.btn($bg-color: transparent);
+                border: 2px solid #ffffff;
+
+                    &:hover {
+                        background-color: #ffffff;
+                        color: partial.$secondaryColor;
+                        transition: 0.3s ease-in-out;
+                    }
+            }
+    }
+}
+
+.billede{
+        grid-column: 5/8;
+        background-image: url(../img/presentation.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+
+/* kontaktformular*/
+
+.kontakt-bg-img {
+    grid-column: 1/7;
+    background: linear-gradient(rgba(142, 142, 142, 0.8), rgba(142, 142, 142, 0.8)), url(../img/meeting.jpg);
+    background-size: cover;
+}
+
+.kontaktform {
+    border-radius: 5px;
+    background-color: partial.$bgColor;
+    padding: 1.3em;
+    width: 50%;
+    margin: 4em auto;
+
+        h3 {
+            font-size: 25px;
+            margin-bottom: 0;
+            margin-left: 0.5em;
+        }
+
+        p {
+            margin-left: 1em;
+        }
+
+        .section-form {
+            display: flex;
+        }
+}
+
+input[type=text], input[type=email], input[type=tel], select, textarea {
+    width: 100%;
+    font-size: 15px;
+}
+
+.visually-hidden{ /* fra a11y -collective defineret class som fjerner element fra skærm, men som stadig kan læses af skærmlæseren*/
+        border: 0;
+        clip-path: inset(50%);
+        height: 1px;
+        margin: 0;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+}
+ 

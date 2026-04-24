@@ -114,7 +114,7 @@ nav a:hover, nav .active {
   font-size: 2vw;
 }
 .header-img .banner-tekst a {
-  background-color: #388071;
+  background-color: #f0f0f0;
   padding: 0.8em 1em;
   border-radius: 8px;
   color: #ffffff;
@@ -162,7 +162,7 @@ main {
   margin-bottom: 2em;
 }
 .cta-1 a, .cta-2 a, .cta-3 a {
-  background-color: #388071;
+  background-color: #f0f0f0;
   padding: 0.8em 1em;
   border-radius: 8px;
   color: #ffffff;
@@ -173,4 +173,86 @@ main {
 .cta-1 a:hover, .cta-2 a:hover, .cta-3 a:hover {
   background-color: #133833;
   transition: 0.3s ease-in-out;
+}
+
+/* Sektion med Tekst og billede */
+.txt-img-section {
+  grid-column: 1/7;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.txt-img-section .tekst {
+  grid-column: 1/5;
+  background-color: #133833;
+  padding: 2em 4em 4em 4em;
+}
+.txt-img-section .tekst p, .txt-img-section .tekst h2 {
+  color: #f0f0f0;
+}
+.txt-img-section .tekst p:nth-of-type(4) {
+  text-align: left;
+}
+.txt-img-section .tekst .secondary-btn {
+  background-color: #f0f0f0;
+  padding: 0.8em 1em;
+  border-radius: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #ffffff;
+}
+.txt-img-section .tekst .secondary-btn:hover {
+  background-color: #ffffff;
+  color: #133833;
+  transition: 0.3s ease-in-out;
+}
+
+.billede {
+  grid-column: 5/8;
+  background-image: url(../img/presentation.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* kontaktformular*/
+.kontakt-bg-img {
+  grid-column: 1/7;
+  background: linear-gradient(rgba(142, 142, 142, 0.8), rgba(142, 142, 142, 0.8)), url(../img/meeting.jpg);
+  background-size: cover;
+}
+
+.kontaktform {
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  padding: 1.3em;
+  width: 50%;
+  margin: 4em auto;
+}
+.kontaktform h3 {
+  font-size: 25px;
+  margin-bottom: 0;
+  margin-left: 0.5em;
+}
+.kontaktform p {
+  margin-left: 1em;
+}
+.kontaktform .section-form {
+  display: flex;
+}
+
+input[type=text], input[type=email], input[type=tel], select, textarea {
+  width: 100%;
+  font-size: 15px;
+}
+
+.visually-hidden { /* fra a11y -collective defineret class som fjerner element fra skærm, men som stadig kan læses af skærmlæseren*/
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }/*# sourceMappingURL=style.css.map */

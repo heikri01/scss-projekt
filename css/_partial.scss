@@ -1,11 +1,11 @@
 /*variabler*/
 
-$bg-color: #f0f0f0; 
-$nav-color: #ffffff;
-$footer-color: #0a1f1c;
-$primary-color: #388071;
-$secondary-color: #133833;
-$text-color: #333;
+$bgColor: #f0f0f0; 
+$navColor: #ffffff;
+$footerColor: #0a1f1c;
+$primaryColor: #388071;
+$secondaryColor: #133833;
+$textColor: #333;
 $font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 /* variabler deklareres i toppen af vores stylesheet og de er globale. Variabler defineret i blokke ( {} ) er normalvis lokale og kan kun tilgås inde i blokken*/
 
@@ -18,8 +18,8 @@ $font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         align-items: $align;
 }
 
-@mixin btn($bg-color:$primary-color, $btn-padding: 0.8em 1em) {
-        background-color: $bg-color;
+@mixin btn($bg-color:$primaryColor, $btn-padding: 0.8em 1em) {
+        background-color: $bgColor;
         padding: $btn-padding;
         border-radius: 8px;
         color: #ffffff;
@@ -33,3 +33,5 @@ $font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         padding: 2em;
         margin: 2em auto;
 }
+
+
